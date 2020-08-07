@@ -1,0 +1,5 @@
+language: node_js
+node_js:
+
+before_script:
+- composer install
