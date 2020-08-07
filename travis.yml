@@ -1,5 +1,5 @@
-language: node_js
-node_js:
+language: Mysql
+Mysql:
 
 before_script:
 - composer install
