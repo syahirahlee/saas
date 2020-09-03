@@ -1,29 +1,44 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+//New imports
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { NavigationBar } from './components/NavigationBar';
+import { Home } from './Home';
+import { About } from './About';
+import { NoMatch } from './NoMatch';
+import Sidebar from './components/Sidebar';
 
 //Deploying a server.
 //https://medium.com/better-programming/how-to-deploy-your-react-app-to-heroku-aedc28b218ae
 //remote access not working?
-function App() {
+
+//Use this to create the website.
+//https://codeburst.io/how-to-create-a-navigation-bar-and-sidebar-using-react-348243ccd93
+/*function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World~ This is a test on whether I can get the heroku server running properly again.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <React.Fragment>
+        <Router>
+          <NavigationBar />
+        </Router>
+      </React.Fragment>
   );
+}*/
+function App() {
+    return (
+        <React.Fragment>
+            <Router>
+                <NavigationBar />
+                <Sidebar />
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route component={NoMatch} />
+                </Switch>
+            </Router>
+        </React.Fragment>
+    );
 }
 
 export default App;
