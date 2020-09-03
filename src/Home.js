@@ -10,7 +10,9 @@ const GridWrapper = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(25px, auto);
 `;
-export const Home = (props) => (
+//removing props as it is not used.
+//export const Home = (props) => (
+export const Home = () => (
     <GridWrapper>
         <p>This is Paragraph one that i am writing on the page.</p>
         <p>This is another paragraph that i am also using</p>
