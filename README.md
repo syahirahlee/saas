@@ -1,3 +1,13 @@
+FOR WINDOWS USERS:
+Use num run build.
+You may need to install the num packages. Do this by npm install.
+After that has been done, you may need to install serve and change scripts around. Follow the instructions that the terminal gives you.
+If you face an issue with running scripts (somethingsomething.ps1 failed to execute), run powershell as administrator and run the following code:
+
+Set-ExecutionPolicy -Scope LocalMachine Unrestricted
+
+Choose either yes, or yes to all.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
