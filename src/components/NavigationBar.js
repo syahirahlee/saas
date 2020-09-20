@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
+import { Nav, Navbar, Form, FormControl, Dropdown } from 'react-bootstrap';
 import styled from 'styled-components';const Styles = styled.div`
   .navbar { background-color: #222; }
   a, .navbar-nav, .navbar-light .nav-link {
@@ -28,8 +28,18 @@ import styled from 'styled-components';const Styles = styled.div`
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/LoginForm">Login / Sign Up</Nav.Link></Nav.Item>
                 </Nav>
+
+                <Dropdown>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        User Center
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Nav.Item><Nav.Link href="/LoginForm">Login / Sign Up</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/LoginForm">Settings</Nav.Link></Nav.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+
             </Navbar.Collapse>
         </Navbar>
     </Styles>
