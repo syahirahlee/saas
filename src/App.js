@@ -8,9 +8,11 @@ import { NavigationBar } from './components/NavigationBar';
 import { Home } from './Home';
 import { About } from './About';
 import { NoMatch } from './NoMatch';
-import {LoginForm} from './LoginForm';
 
-import Sidebar from './components/Sidebar';
+import SignUpForm from './pages/SignUpForm';
+import SignInForm from './pages/SignInForm';
+
+//import Sidebar from './components/Sidebar';
 
 //Deploying a server.
 //https://medium.com/better-programming/how-to-deploy-your-react-app-to-heroku-aedc28b218ae
@@ -41,7 +43,8 @@ function App() {
                 <Switch>
                     <Route exact path="/home" component={Home} />
                     <Route path="/about" component={About} />
-                    <Route path="/login" component={LoginForm} />
+                    <Route path="/sign-in" component={SignInForm} />
+                    <Route path="/sign-up" component={SignUpForm} />
                     <Route component={NoMatch} />
                 </Switch>
             </Router>

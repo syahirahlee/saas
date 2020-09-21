@@ -39,8 +39,8 @@ export const NavigationBar = () => (
                         User Center
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Nav.Item><Nav.Link href="/login">Login / Sign Up</Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link href="/login">Settings</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/sign-in">Sign In</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href="/sign-in">Settings</Nav.Link></Nav.Item>
                     </Dropdown.Menu>
                 </Dropdown>
 
