@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class LoginForm extends Component{
+export class LoginForm extends Component{
 
   constructor(props){
     super(props)
@@ -26,17 +26,15 @@ class LoginForm extends Component{
             value ={this.state.username} 
             onChange={this.handleUsernameChange} 
           />
-
         </div>
       </form>
-      
     );
-
   }
-
 }
 
-export default LoginForm;
+//export class LoginForm;
+
+//export default LoginForm;
 
 /*import React from 'react';
 import styled from 'styled-components';

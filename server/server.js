@@ -8,4 +8,5 @@ const port = process.env.PORT || 3000;app.use(express.static(publicPath));app.ge
     res.sendFile(path.join(publicPath, 'index.html'));
 });app.listen(port, () => {
     console.log('Server is up!');
+    console.log('call localhost:3000 to run');
 });

@@ -4,8 +4,9 @@ import styled from 'styled-components';const Wrapper = styled.div`
   margin-left: 6em;
   margin-right: 6em;
 `;
-export const NoMatch = () => (
+
+export const NoMatchTest = () => (
     <Wrapper>
-        <h2>404 Not found on server.</h2>
+        <h2>No Match test with apple logo</h2>
     </Wrapper>
 )

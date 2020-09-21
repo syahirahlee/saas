@@ -7,8 +7,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NavigationBar } from './components/NavigationBar';
 import { Home } from './Home';
 import { About } from './About';
-import { SearchResult } from './Search';
 import { NoMatch } from './NoMatch';
+import {LoginForm} from './LoginForm';
+
 import Sidebar from './components/Sidebar';
 
 //Deploying a server.
@@ -26,16 +27,21 @@ import Sidebar from './components/Sidebar';
       </React.Fragment>
   );
 }*/
+
+//This class requires you to import the code first before you can run it. EX, loginform.
+//After that has been done, add it to the switch. This what allows other classes to use the code.
+//Small note, this switch code provides the path to a file. you can type localhost:5000/login to get to the login page.
+//The default page when an item isnt found is component = {NoMatch}, effectively, 404. Can be triggered by http://localhost:5000/ufhsdkajfhds
+//If you want to add the link to the navigationbar you will need to use the path in the switch.
 function App() {
     return (
         <React.Fragment>
             <Router>
                 <NavigationBar />
-                <Sidebar />
                 <Switch>
-                    <Route exact path="/" component={Home} />
+                    <Route exact path="/home" component={Home} />
                     <Route path="/about" component={About} />
-                    <Route path="/search" component={SearchResult} />
+                    <Route path="/login" component={LoginForm} />
                     <Route component={NoMatch} />
                 </Switch>
             </Router>
