@@ -22,14 +22,14 @@ const Styles = styled.div`
 export const NavigationBar = () => (
     <Styles>
         <Navbar expand="lg">
-            <Navbar.Brand href="/home">SEERTest 2</Navbar.Brand>
+            <Navbar.Brand href="/">SEERTest 2</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Form className="form-center">
                 <FormControl type="text" placeholder="Search" className="" />
             </Form>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <Nav.Item><Nav.Link href="/home">Home</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/about">About</Nav.Link>
                     </Nav.Item><Nav.Item><Nav.Link href="/search">Filter</Nav.Link></Nav.Item>
                 </Nav>
@@ -43,7 +43,6 @@ export const NavigationBar = () => (
                         <Nav.Item><Nav.Link href="/sign-in">Settings</Nav.Link></Nav.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-
             </Navbar.Collapse>
         </Navbar>
     </Styles>

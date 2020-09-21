@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
+import Select from 'react-select';
 
 const GridWrapper = styled.div`
   display: grid;
@@ -12,9 +13,18 @@ const GridWrapper = styled.div`
 `;
 //removing props as it is not used.
 //export const Home = (props) => (
+
+const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+]
 export const Home = () => (
-    <GridWrapper>
+/*    <GridWrapper>
         <p>This is Paragraph one that i am writing on the page.</p>
         <p>This is another paragraph that i am also using</p>
-    </GridWrapper>
+    </GridWrapper>*/
+    <Select options={options} />
+
 )
+

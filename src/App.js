@@ -35,18 +35,19 @@ import SignInForm from './pages/SignInForm';
 //Small note, this switch code provides the path to a file. you can type localhost:5000/login to get to the login page.
 //The default page when an item isnt found is component = {NoMatch}, effectively, 404. Can be triggered by http://localhost:5000/ufhsdkajfhds
 //If you want to add the link to the navigationbar you will need to use the path in the switch.
+//Reverted to standard naming of main home page. Calling the webpage should now land you at home.
 function App() {
     return (
         <React.Fragment>
             <Router>
                 <NavigationBar />
                 <Switch>
-                    <Route exact path="/home" component={Home} />
+                    <Route exact path="/" component={Home} />
                     <Route path="/search" component={SearchResult} />
                     <Route path="/about" component={About} />
                     <Route path="/sign-in" component={SignInForm} />
                     <Route path="/sign-up" component={SignUpForm} />
-                    <Route component={NoMatch} />
+                    <Route path="/404" component={NoMatch} />
                 </Switch>
             </Router>
         </React.Fragment>
