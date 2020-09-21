@@ -8,7 +8,7 @@ import { NavigationBar } from './components/NavigationBar';
 import { Home } from './Home';
 import { About } from './About';
 import { NoMatch } from './NoMatch';
-
+import { SearchResult } from './Search';
 import SignUpForm from './pages/SignUpForm';
 import SignInForm from './pages/SignInForm';
 
@@ -42,6 +42,7 @@ function App() {
                 <NavigationBar />
                 <Switch>
                     <Route exact path="/home" component={Home} />
+                    <Route path="/search" component={SearchResult} />
                     <Route path="/about" component={About} />
                     <Route path="/sign-in" component={SignInForm} />
                     <Route path="/sign-up" component={SignUpForm} />
