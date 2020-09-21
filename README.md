@@ -1,5 +1,5 @@
 FOR WINDOWS USERS:
-Use num run build.
+Use npm run build.
 You may need to install the npm packages. Do this by npm install.
 After that has been done, you may need to install serve and change scripts around. Follow the instructions that the terminal gives you.
 If you face an issue with running scripts (somethingsomething.ps1 failed to execute), run powershell as administrator and run the following code:
