@@ -31,7 +31,7 @@ export const NavigationBar = () => (
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="/home">Home</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/about">About</Nav.Link>
-                    </Nav.Item><Nav.Item><Nav.Link href="/No Match">Filter</Nav.Link></Nav.Item>
+                    </Nav.Item><Nav.Item><Nav.Link href="/search">Filter</Nav.Link></Nav.Item>
                 </Nav>
 
                 <Dropdown>
