@@ -11,6 +11,7 @@ import { NoMatch } from './NoMatch';
 import { SearchResult } from './Search';
 import SignUpForm from './pages/SignUpForm';
 import SignInForm from './pages/SignInForm';
+import Form from './form';
 
 //import Sidebar from './components/Sidebar';
 
