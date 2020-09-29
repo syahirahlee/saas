@@ -37,7 +37,7 @@ import Form from './form';
 //The default page when an item isnt found is component = {NoMatch}, effectively, 404. Can be triggered by http://localhost:5000/ufhsdkajfhds
 //If you want to add the link to the navigationbar you will need to use the path in the switch.
 //Reverted to standard naming of main home page. Calling the webpage should now land you at home.
-function App() {
+function App () {
     return (
         <React.Fragment>
             <Router>
@@ -50,9 +50,39 @@ function App() {
                     <Route path="/sign-up" component={SignUpForm} />
                     <Route path="/404" component={NoMatch} />
                 </Switch>
+            
             </Router>
         </React.Fragment>
+     
+      
     );
 }
 
+class App extends component {
+  state = {
+    fields: {}
+  };
+
+onChange = updatedValue => {
+   this.setState({
+   fields: {
+
+  ...this.state.fields,
+  ...updatedValue
+}
+});
+};
+
+  render(){
+    return (
+      <div className="App">
+        <Form/> onChange= {fields => this.onChange(fields)}   />
+       <p> {JSON.stringify(this.state.fields, null,2)} 
+       </p>
+        </div>
+    );
+  }
+}
+
 export default App;
+ 
