@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Select from 'react-select';
+import Submit from "./Submit";
 
 const GridWrapper = styled.div`
   display: grid;
@@ -25,6 +26,5 @@ export const Home = () => (
         <p>This is another paragraph that i am also using</p>
     </GridWrapper>*/
     <Select options={options} />
-
 )
 
