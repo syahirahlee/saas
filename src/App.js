@@ -11,7 +11,8 @@ import { NoMatch } from './NoMatch';
 import { SearchResult } from './Search';
 import SignUpForm from './pages/SignUpForm';
 import SignInForm from './pages/SignInForm';
-import Form from './form';
+import Submit from './Submit';
+//import Form from './form';
 
 //import Sidebar from './components/Sidebar';
 
@@ -49,6 +50,7 @@ function App () {
                     <Route path="/sign-in" component={SignInForm} />
                     <Route path="/sign-up" component={SignUpForm} />
                     <Route path="/404" component={NoMatch} />
+                    <Route path="/submit" component={Submit}/>
                 </Switch>
             
             </Router>
@@ -58,31 +60,31 @@ function App () {
     );
 }
 
-class App extends component {
-  state = {
-    fields: {}
-  };
-
-onChange = updatedValue => {
-   this.setState({
-   fields: {
-
-  ...this.state.fields,
-  ...updatedValue
-}
-});
-};
-
-  render(){
-    return (
-      <div className="App">
-        <Form/> onChange= {fields => this.onChange(fields)}   />
-       <p> {JSON.stringify(this.state.fields, null,2)} 
-       </p>
-        </div>
-    );
-  }
-}
+// class App extends component {
+//   state = {
+//     fields: {}
+//   };
+//
+// onChange = updatedValue => {
+//    this.setState({
+//    fields: {
+//
+//   ...this.state.fields,
+//   ...updatedValue
+// }
+// });
+// };
+//
+//   render(){
+//     return (
+//       <div className="App">
+//         <Form/> onChange= {fields => this.onChange(fields)}   />
+//        <p> {JSON.stringify(this.state.fields, null,2)}
+//        </p>
+//         </div>
+//     );
+//   }
+// }
 
 export default App;
  
