@@ -8,12 +8,11 @@ import { NavigationBar } from './components/NavigationBar';
 import { Home } from './Home';
 import { About } from './About';
 import { NoMatch } from './NoMatch';
-import { SearchResult } from './Search';
+import {SearchResult} from './Search';
 import SignUpForm from './pages/SignUpForm';
 import SignInForm from './pages/SignInForm';
 import Submit from './Submit';
 //import Form from './form';
-
 //import Sidebar from './components/Sidebar';
 
 //Deploying a server.
@@ -87,26 +86,3 @@ function App () {
 // }
 
 export default App;
-
-function getData(){
-    var mysql = require('mysql');
-    var connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '123123',
-        database: 'seer'
-    });
-console.log(connection);
-    connection.connect();
-
-    connection.query('select * from articles', function (err, rows, fields) {
-        if (err) throw err
-
-        console.log(rows)
-    });
-
-    connection.end();
-}
-
-fetch('http://localhost:3000/users')
-    .then(res => getData());

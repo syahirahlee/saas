@@ -1,0 +1,72 @@
+export default [
+    {
+        id: 1,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 2,
+        authors: ["Mauricio Aniche", "Marco Aurelio Gerosa"],
+        title: 'Most common mistake in test-driven development practice: result from an online survey with developers',
+        year: 2010,
+    },
+    {
+        id: 3,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 4,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 5,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 6,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 7,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 8,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 9,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+    {
+        id: 10,
+        authors: ["Janzen, D S", "Saiedian, H"],
+        title: 'Does Test-Driven Development Really Improve Software Design Quality?',
+        year: 2001,
+        pages: '77–84',
+    },
+
+];
