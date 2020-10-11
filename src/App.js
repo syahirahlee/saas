@@ -6,7 +6,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NavigationBar } from './components/NavigationBar';
 import { Home } from './Home';
-import { About } from './About';
+import { UserManage } from './UserManage';
 import { NoMatch } from './NoMatch';
 import {SearchResult} from './Search';
 import SignUpForm from './pages/SignUpForm';
@@ -45,17 +45,14 @@ function App () {
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/search" component={SearchResult} />
-                    <Route path="/about" component={About} />
+                    <Route path="/users" component={UserManage} />
                     <Route path="/sign-in" component={SignInForm} />
                     <Route path="/sign-up" component={SignUpForm} />
                     <Route path="/404" component={NoMatch} />
                     <Route path="/submit" component={Submit}/>
                 </Switch>
-            
             </Router>
         </React.Fragment>
-     
-      
     );
 }
 

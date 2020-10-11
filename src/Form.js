@@ -4,7 +4,7 @@ export default class Form extends React.Component {
 
 state = {
 // The absolute state of this class before.
-title: "abc",
+title: "",
 author: "",
 year: "",
 source: "",
@@ -12,7 +12,10 @@ DOI: "",
 number: "",
 volume: "",
 pageNumber: "",
-
+moderatorApproved: false,
+adminApproved: false,
+rejectedBy: null,
+from: JSON.parse(localStorage.getItem('loginUser')).email
 };
 
 change = e => {
@@ -24,32 +27,34 @@ change = e => {
 };
 //Fixed an issue of using () to e.
 onSubmit = e => {
+    let books = localStorage.getItem('books');
+    books = books ? JSON.parse(books) : [];
+    books.push(this.state);
+
+    localStorage.setItem('books', JSON.stringify(books))
     e.preventDefault();
   //this.props.onSubmit(this.state);
-    this.setState({
-
-        title: "abc",
-        author: "",
-        year: "",
-        source: "",
-        DOI: "",
-        number: "",
-        volume: "",
-        pageNumber: "",
-    });
-
-    this.props.onChange({
-
-    title: "abc",
-    author: "",
-    year: "",
-    source: "",
-    DOI: "",
-    number: "",
-    volume: "",
-    pageNumber: "",
-});
-
+  //   this.setState({
+  //       title: "abc",
+  //       author: "",
+  //       year: "",
+  //       source: "",
+  //       DOI: "",
+  //       number: "",
+  //       volume: "",
+  //       pageNumber: "",
+  //   });
+  //
+  //   this.props.onChange({
+  //       title: "abc",
+  //       author: "",
+  //       year: "",
+  //       source: "",
+  //       DOI: "",
+  //       number: "",
+  //       volume: "",
+  //       pageNumber: "",
+  //   });
 };
 
 

@@ -33,28 +33,12 @@ export const SearchResult = () => {
     return (
         <Styles>
             <div className="container">
-                {/*<div className="item">*/}
-                {/*    <p>Filter by date range</p>*/}
-                {/*    <Form style={{display: 'inline-block'}}>*/}
-                {/*        <Form.Group style={{marginBottom: 0}} controlId="exampleForm.SelectCustom">*/}
-                {/*            <Form.Control as="select" size="sm" custom>*/}
-                {/*                <option>Last 30 days</option>*/}
-                {/*                <option>Last 15 days</option>*/}
-                {/*                <option>September 2020</option>*/}
-                {/*                <option>August 2020</option>*/}
-                {/*            </Form.Control>*/}
-                {/*        </Form.Group>*/}
-                {/*    </Form>*/}
-                {/*</div>*/}
-                {/*<div className="item">or</div>*/}
                 <div className="item">
                     <p>Year from</p>
-                    {/*<DatePicker selected={date} />*/}
                     <input id="min" type="text" placeholder="min: 1990" />
                 </div>
                 <div className="item">
                     <p>Year to</p>
-                    {/*<DatePicker selected={date} />*/}
                     <input id="max" type="text" placeholder="max: 2020" />
                 </div>
                 <div className="item">
