@@ -25,7 +25,7 @@ function signOut(e){
     user = JSON.parse(user);
     user.logIn = false;
     localStorage.setItem('loginUser', JSON.stringify(user));
-    window.location.reload();
+    window.location.href = '/';
     e.preventDefault();
 }
 

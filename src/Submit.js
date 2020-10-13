@@ -26,6 +26,18 @@ class Submit extends Component {
         let books = JSON.parse(this.state.books);
         let user = JSON.parse(this.state.user);
         if(user.role == 'moderator') {
+            if(books.filter(item => item.title == book.title).length > 1){
+                alert('Book duplicate.');
+                return;
+            }
+            if(!book.author || book.author.trim().length == 0){
+                alert("Not credible!");
+                return;
+            }
+            if(!book.source || book.source.trim().length == 0){
+                alert("Not a empirical study!");
+                return;
+            }
             books.find(item => item.title == book.title).moderatorApproved = true;
         }else if(user.role == 'analyst'){
             books.find(item => item.title == book.title).adminApproved = true;
