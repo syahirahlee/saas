@@ -4,6 +4,7 @@ node_js:
   - "12"
 
 script:
-    - npm test
+    - npm cache verify
+    - npm test --passWithNoTests
     - npm run build
 
