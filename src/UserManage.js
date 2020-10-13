@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button'
 
+/*
 const GridWrapper = styled.div`
   display: grid;
   grid-gap: 10px;
@@ -12,10 +13,11 @@ const GridWrapper = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(25px, auto);
 `;
+*/
 
 let users = JSON.parse(localStorage.getItem('users'));
 if(users) {
-    users = users.filter(user => user.role != 'admin')
+    users = users.filter(user => user.role !== 'admin')
         .map(user => <ListGroup.Item style={{display: 'flex', justifyContent: 'space-between'}}>
             <p>{user.email}</p>
             <Button variant="warning" onClick={remove.bind(this, user)}>remove</Button>
@@ -26,7 +28,7 @@ function remove(user){
     let msg = window.confirm('remove this user?');
     if(!msg) return;
     let users = JSON.parse(localStorage.getItem('users'));
-    users = users.filter(i => i.email != user.email);
+    users = users.filter(i => i.email !== user.email);
     localStorage.setItem('users', JSON.stringify(users));
     window.location.reload();
 }

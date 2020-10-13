@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 class SignUpForm extends Component {
     constructor(props) {
@@ -25,20 +25,19 @@ class SignUpForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        if(this.state.email.trim().length == 0){
+        if(this.state.email.trim().length === 0){
             alert('Email cannot be empty');
             return;
         }
-        if(this.state.password.trim().length == 0){
+        if(this.state.password.trim().length === 0){
             alert('Password cannot be empty');
             return;
         }
         let users = JSON.parse(localStorage.getItem('users'));
-        if(users.find(user => user.email == this.state.email)){
+        if(users.find(user => user.email === this.state.email)){
             alert('Email already exists.');
             return;
         }
-
         this.state.role = 'guest';
         users.push(this.state);
         localStorage.setItem('users', JSON.stringify(users));

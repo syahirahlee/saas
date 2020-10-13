@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
-import styled from 'styled-components';
-import Select from 'react-select';
+//import React, {Component} from 'react';
+import React from 'react';
+//import styled from 'styled-components';
+//import Select from 'react-select';
 import ListGroup from 'react-bootstrap/ListGroup';
-
+// This has been commented out so it works properly.
+/*
 const GridWrapper = styled.div`
   display: grid;
   grid-gap: 10px;
@@ -11,7 +13,7 @@ const GridWrapper = styled.div`
   margin-right: 6em;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(25px, auto);
-`;
+`;*/
 //removing props as it is not used.
 //export const Home = (props) => (
 let approved, reject, books, user;
@@ -21,10 +23,10 @@ books = books ? JSON.parse(books) : [];
 if(user) {
     user = JSON.parse(user);
     approved = books
-        .filter(book => book.from == user.email && book.moderatorApproved && book.adminApproved)
+        .filter(book => book.from === user.email && book.moderatorApproved && book.adminApproved)
         .map(book => <ListGroup.Item variant="success">{book.title}</ListGroup.Item>);
     reject = books
-        .filter(book => book.from == user.email && book.rejectedBy)
+        .filter(book => book.from === user.email && book.rejectedBy)
         .map(book => <ListGroup.Item variant="dark">{book.title}</ListGroup.Item>);
 }
 

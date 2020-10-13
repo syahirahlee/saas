@@ -1,9 +1,11 @@
 import React from 'react';
 import { Nav, Navbar, Form, FormControl, Dropdown } from 'react-bootstrap';
 import styled from 'styled-components';
-import {useSelector, useDispatch} from "react-redux";
+//import {useSelector, useDispatch} from "react-redux";
+import {useDispatch} from "react-redux";
 import {search} from '../actions/index';
 
+// Original colour for the entire buttons and other stuff is #9FFFCB
 const Styles = styled.div`
   .navbar { background-color: #222; }
   a, .navbar-nav, .navbar-light .nav-link {
@@ -42,7 +44,7 @@ export const NavigationBar = () => {
         signInOut = <Nav.Item><Nav.Link href="/sign-in">Sign In</Nav.Link></Nav.Item>
         signUp = <Nav.Item><Nav.Link href="/sign-up">Sign Up</Nav.Link></Nav.Item>
     }
-    if(user && JSON.parse(user).role == 'admin'){
+    if(user && JSON.parse(user).role === 'admin'){
         userBtn = <Nav.Item><Nav.Link href="/users">Users</Nav.Link></Nav.Item>
     }
     return (
@@ -61,7 +63,7 @@ export const NavigationBar = () => {
                         <Nav.Item><Nav.Link href="/search">Filter</Nav.Link></Nav.Item>
                     </Nav>
 
-                    <Dropdown>
+                    <Dropdown textColor="#000">
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                             User Center
                         </Dropdown.Toggle>

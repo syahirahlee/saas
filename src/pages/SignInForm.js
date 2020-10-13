@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 class SignInForm extends Component {
     constructor() {
@@ -33,7 +33,7 @@ class SignInForm extends Component {
         // if(!this.emails.includes(this.state.email)) return;
         // if(this.password != this.state.password) return;
 
-        let loginUser = this.state.users.find(user => user.email == this.state.email && user.password == this.state.password);
+        let loginUser = this.state.users.find(user => user.email === this.state.email && user.password === this.state.password);
         if(!loginUser){
             alert('wrong email or password');
             return;

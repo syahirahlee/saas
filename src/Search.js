@@ -1,7 +1,8 @@
 import React from 'react';
-import DatePicker from "react-datepicker";
+//import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Form, Button } from 'react-bootstrap';
+//import { Form, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import {useSelector, useDispatch} from "react-redux";
 import {search} from './actions/index';

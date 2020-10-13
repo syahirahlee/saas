@@ -1,7 +1,7 @@
 import data from '../function';
 
 function searchFunc(filter){
-    if(filter.query.trim().length == 0 && filter.min==1990 && filter.max==2020) return data;
+    if(filter.query.trim().length === 0 && filter.min===1990 && filter.max===2020) return data;
 
     return data.filter(item => {
         return item.title.toLowerCase().includes(filter.query.toLowerCase()) && item.year >= parseInt(filter.min) && item.year <= parseInt(filter.max);
