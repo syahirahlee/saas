@@ -52,6 +52,7 @@ class Submit extends Component {
         window.location.reload();
     }
 
+
     render(){
         let form, bookList;
         if(!this.state.user) return;
