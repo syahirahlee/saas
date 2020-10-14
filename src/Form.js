@@ -29,7 +29,8 @@ change = e => {
 onSubmit = e => {
     let books = localStorage.getItem('books');
     books = books ? JSON.parse(books) : [];
-    this.state.id = Date.now();
+    //this.state.id = Date.now();
+    this.setState({id:Date.now()});
     books.push(this.state);
 
     localStorage.setItem('books', JSON.stringify(books))
