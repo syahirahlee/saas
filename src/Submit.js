@@ -26,7 +26,7 @@ class Submit extends Component {
         let books = JSON.parse(this.state.books);
         let user = JSON.parse(this.state.user);
         if(user.role === 'moderator') {
-            if(books.filter(item => item.title === book.title).length > 1){
+            if(books.filter(item => item.title === book.title && item.moderatorApproved).length >= 1){
                 alert('Book duplicate.');
                 return;
             }
@@ -47,7 +47,7 @@ class Submit extends Component {
     }
     reject(book){
         let books = JSON.parse(this.state.books);
-        books.find(item => item.title === book.title).rejectedBy = JSON.parse(this.state.user).email;
+        books.find(item => item.id === book.id).rejectedBy = JSON.parse(this.state.user).email;
         localStorage.setItem('books', JSON.stringify(books));
         window.location.reload();
     }
