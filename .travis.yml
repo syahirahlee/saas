@@ -5,6 +5,6 @@ node_js:
 
 script:
     - npm cache verify
-    - npm test --passWithNoTests
+    - npm test
     - npm run build
 
