@@ -50,7 +50,7 @@ export const NavigationBar = () => {
     return (
         <Styles>
             <Navbar expand="lg">
-                <Navbar.Brand href="/">SEERTest 2</Navbar.Brand>
+                <Navbar.Brand href="/">SEER</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Form className="form-center">
                     <FormControl type="text" placeholder="Search" className="" onChange={(event) => dispatch(search(event.target.value))}/>
