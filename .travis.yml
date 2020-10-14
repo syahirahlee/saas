@@ -5,6 +5,5 @@ node_js:
 
 script:
     - npm cache verify
-    - npm test
     - npm run build
 
