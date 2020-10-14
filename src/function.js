@@ -75,7 +75,7 @@ export default books;
 //
 // ];
 let users = [
-    {email: "moderator1@gmail.com", password: "123", role: "moderator"},
+    {email: "ç", password: "123", role: "moderator"},
     {email: "moderator2@gmail.com", password: "123", role: "moderator"},
     {email: "moderator3@gmail.com", password: "123", role: "moderator"},
     {email: "moderator4@gmail.com", password: "123", role: "moderator"},
