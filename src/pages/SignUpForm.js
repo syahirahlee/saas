@@ -8,6 +8,7 @@ class SignUpForm extends Component {
         this.state = {
             email: '',
             password: '',
+            role: '',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -38,10 +39,13 @@ class SignUpForm extends Component {
             alert('Email already exists.');
             return;
         }
-        this.state.role = 'guest';
+        //this.state.role = 'guest';
+        //role.setState('guest');
+        this.setState({role: 'guest'});
         users.push(this.state);
         localStorage.setItem('users', JSON.stringify(users));
-        this.state.logIn = true;
+        //this.state.logIn = true;
+        this.setState({logIn: true});
         localStorage.setItem('loginUser', JSON.stringify(this.state));
         window.location.href = '/';
         console.log(this.state);
