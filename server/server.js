@@ -6,7 +6,7 @@ var router = express.Router();
 //Following is backed up just in case it doesnt work.
 //const publicPath = path.join(__dirname, '..', 'public');
 const publicPath = path.join(__dirname, '..', 'build');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 app.use(express.static(publicPath));
 
@@ -24,7 +24,7 @@ app.listen(port, () => {
         user: 'root',
         password: '123123',
         database: 'seer',
-        port: 3000
+        port: 5000
     });
     connection.connect();
     connection.query('select * from articles', function (err, rows, fields) {
