@@ -24,7 +24,7 @@ app.listen(port, () => {
         user: 'root',
         password: '123123',
         database: 'seer',
-        port: 5000
+        port: (process.env.PORT || 5000)
     });
     connection.connect();
     connection.query('select * from articles', function (err, rows, fields) {
